@@ -32,7 +32,7 @@ extension XCUIElement {
     
     @discardableResult
     func waitForAndAssertExistence(file: StaticString = #file, line: UInt = #line) -> Self {
-        let timeout = 7
+        let timeout = 7.0
         XCTAssert(waitForExistence(timeout: timeout), "\(self) did not exist on screen within the time \(timeout) seconds", file: file, line: line)
         return self
     }
